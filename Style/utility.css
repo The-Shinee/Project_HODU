@@ -1,0 +1,100 @@
+/* Width */
+.width-135{
+    width: 135px;
+}
+
+.width-140{
+    width: 140px;
+}
+
+.width-143{
+    width: 143px;
+}
+
+.width-530{
+    width: 530px;
+}
+
+/* Height */
+.height-50{
+    height: 50px;
+}
+
+.height-60{
+    height: 60px;
+}
+
+/* margin */
+.margin-b-68{
+    margin-bottom: 68px;
+}
+
+/* Font */
+.title-big{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    color: black;
+}
+
+.description{
+    font-size: 16px;
+    line-height: 20px;
+    color: black;
+}
+
+.description-14{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.title-24{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.title-36{
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+.main-title{
+    font-size: 38px;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+/* color */
+.color-terracotta{
+    color: #D97652;
+}
+
+.color-iron{
+    color: #606367
+}
+
+.color-white{
+    color:white;
+}
+
+.color-ivory{
+    color: #F2E9D8;
+}
+
+/* border */
+.border-less{
+    border: none;
+}
+
+/* align */
+.align-v-middle{
+    vertical-align: middle;
+}
+
+/* Anchor */
+
+.anchor{
+    position: relative;
+}

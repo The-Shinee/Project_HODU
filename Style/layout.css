@@ -1,0 +1,220 @@
+/* Header */
+#navbar-top{
+    justify-content: center;
+
+    background-color: #F2E9D8;
+}
+
+#navbar-top > .content-box{
+    height: 102px;
+}
+
+#navbar-top > .content-box > :last-child{
+    justify-content: center;
+    gap: 49px;
+}
+
+.nav-links{
+    gap: 30px;
+}
+
+/* Main */
+/* Top banner */
+#banner-top{
+    margin-bottom: 80px;
+
+    justify-content: center;
+
+    background-color: #F2E9D8;
+}
+
+#banner-top > .content-box{
+    height: 798px;
+
+    align-items: flex-start;
+}
+
+#banner-top > .content-box > :first-child{
+    padding-top: 200px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#banner-top > .content-box > :last-child{
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Introduce */
+#introduce{
+    margin-bottom: 120px;
+
+    justify-content: center;
+}
+
+#introduce > .content-box > :last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+#description{
+    margin-bottom: 88px;
+
+    justify-content: center;
+}
+
+#description > .content-box{
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+#description > .content-box > :first-child{
+    color: #D97652;
+}
+
+#description > .content-box > :last-child > span{
+    color: #D97652;
+}
+
+/* Gallery */
+#gallery{
+    justify-content: center;
+}
+
+#gallery > .content-box > ul{
+    width: 100%;
+
+    flex-direction: column;
+    gap: 72px;
+
+    list-style: none;
+}
+
+#gallery > .content-box > ul > li{
+    gap: 72px;
+}
+
+#gallery > .content-box > ul li > img{
+    width: 378px;
+    height: 378px;
+    border-radius: 30px;
+
+    vertical-align: top;
+
+    object-fit: cover;
+    filter: drop-shadow(10px 10px 30px #00000040);
+}
+
+
+#cat-list-container{
+    margin-bottom: 80px;
+}
+
+#show-more-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px
+}
+
+/* Location */
+#location{
+    margin-bottom: 80px;
+
+    justify-content: center;
+}
+
+#location > .content-box{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#location > .content-box > :first-child{
+    margin-bottom: 20px;
+}
+
+#location > .content-box > :nth-child(2){
+    margin-bottom: 48px;
+}
+
+/* Subscribe */
+#subscribe{
+    margin-bottom: 240px;
+
+    justify-content: center;
+}
+
+#subscribe .container{
+    border-radius: 30px;
+    background-color: #263140;
+    padding: 50px 58px 51px;
+}
+
+/* subscribe-description */
+#subscribe .container > :first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* subscribe-form-container */
+#subscribe .container > :last-child{
+    width: 530px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* subscribe form */
+#subscribe-form{
+    width: 100%;
+
+    border-radius: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 6px 5px 28px;
+    gap: 6px;
+}
+
+#input-email{
+    width: 100%;
+}
+
+/* bottom img */
+#img-cat-bottom{
+    width: 100%;
+    height: 340px;
+
+    position: absolute;
+    bottom: -100%;
+    z-index: -1;
+
+    object-fit: cover;
+}
+
+/* Footer */
+#footer-main{
+    justify-content: center;
+}
+
+#footer-main > .content-box{
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+#group-footer-icon{
+    display: flex;
+    gap: 20px;
+}
