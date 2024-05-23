@@ -124,7 +124,7 @@
                                 <img src="Resources/Images/icon-mail.svg" alt="" class="align-v-middle">
                                 <label for="input-email"></label>
                                 <input type="email" name="input-email" id="input-email" placeholder="Enter your e-mail address" class="description border-less align-v-middle">
-                                <button class="button-default width-135 height-50 align-v-middle">
+                                <button type="button" id="subscribe-button" class="button-default width-135 height-50 align-v-middle">
                                     Subscribe
                                 </button>
                             </form>
@@ -133,9 +133,18 @@
                 </div>
             </section>
         </main>
+
+        <div id="subscribe-modal">
+            <img src="Resources/Images/img-cat-modal.svg" alt="">
+            <h2 class="color-terracotta title-36">Thank you!</h2>
+            <p class="description-14">Lorem Ipsum is simply dummy text of the printing industry.</p>
+            <button type="button" id="subscribe-modal-button" class="button-default" >OK! I Love HODU</button>
+        </div>
+
         <div class="anchor">
             <img src="Resources/Images/img-cat-bottom.svg" alt="" id="img-cat-bottom">
         </div>
+
         <footer>
             <section id="footer-main" class="container">
                 <div class="container content-box">
@@ -160,8 +169,11 @@
             </section>
         </footer>
 
+        <script type="module" src="./Script/initialize.js"></script>
         <script type="module" src="./Script/api.js"></script>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d1a5a6bf215d1bd310f066fb0cc072ae&libraries=services"></script>
+        <script type="module" src="./Script/events.js"></script>
+
+        <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=d1a5a6bf215d1bd310f066fb0cc072ae&libraries=services"></script>
         <script>
             var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                 mapOption = {
@@ -215,9 +227,6 @@
                         }
                     });
 
-
-
-
                     // 마커와 인포윈도우를 표시합니다
                     displayMarker(locPosition);
                 });
@@ -240,7 +249,6 @@
                 // 지도 중심좌표를 접속위치로 변경합니다
                 map.setCenter(locPosition);
             }
-
         </script>
     </body>
 </html>

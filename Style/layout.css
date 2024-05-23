@@ -78,16 +78,27 @@
 
 /* Gallery */
 #gallery{
+    margin-bottom: 80px;
+
     justify-content: center;
+}
+
+#gallery > .content-box{
+    text-align: center;
 }
 
 #gallery > .content-box > ul{
     width: 100%;
+    margin-bottom: 100px;
 
     flex-direction: column;
     gap: 72px;
 
     list-style: none;
+}
+
+#gallery > .content-box > p{
+    margin-bottom: 28px;
 }
 
 #gallery > .content-box > ul > li{
@@ -180,6 +191,45 @@
 
 #input-email{
     width: 100%;
+}
+
+/* modal window */
+#subscribe-modal{
+    width: 600px;
+    height: 400px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    visibility: hidden;
+
+    background-image: url("../Resources/Images/img-background-modal.svg");
+    text-align: center;
+    border-radius: 30px;
+}
+
+#subscribe-modal > :first-child{
+    margin-bottom: 24px;
+}
+
+#subscribe-modal > :nth-child(2){
+    margin-bottom: 12px;
+}
+
+#subscribe-modal > :nth-child(3){
+    margin-bottom: 38px;
+}
+
+#subscribe-modal-button{
+    width: auto;
+    height: auto;
+
+    padding: 15px 29px;
 }
 
 /* bottom img */
