@@ -78,26 +78,25 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 // 현재 위치를 업데이트 할 텍스트 박스
 const locationTextbox = document.querySelector("#location > .content-box > :nth-child(2)");
 
+const geocoder = new kakao.maps.services.Geocoder();
+
 // HTML5의 geolocation으로 사용할 수 있는지 확인합니다
 if (navigator.geolocation) {
 
     // GeoLocation을 이용해서 접속 위치를 얻어옵니다
     navigator.geolocation.getCurrentPosition(function(position) {
 
-        // const lat = position.coords.latitude, // 위도
-        //     lon = position.coords.longitude; // 경도
+        const lat = position.coords.latitude, // 위도
+            lon = position.coords.longitude; // 경도
 
-        const lat = 37.2518163005629, // 위도
-            lon = 127.072602539897; // 경도
+        // const lat = 37.2518163005629, // 위도
+        //     lon = 127.072602539897; // 경도
 
         const locPosition = new kakao.maps.LatLng(lat, lon); // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
 
-        const geocoder = new kakao.maps.services.Geocoder();
         geocoder.coord2Address(lon, lat, (result, status) =>{
             if (status === kakao.maps.services.Status.OK) {
-                //console.log('그런 너를 마주칠까 ' + result[0].address.address_name + '을 못가');
-                const roadAddress = result[0].road_address;
-                locationTextbox.textContent = `${roadAddress.address_name} ${roadAddress.building_name}`;
+                setFullAddress(result[0]);
             }
         });
 
@@ -106,7 +105,6 @@ if (navigator.geolocation) {
     });
 
 } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
-
     const locPosition = new kakao.maps.LatLng(33.450701, 126.570667);
     displayMarker(locPosition);
 }
@@ -122,4 +120,33 @@ function displayMarker(locPosition) {
 
     // 지도 중심좌표를 접속위치로 변경합니다
     map.setCenter(locPosition);
+
+    // 맵에 click 이벤트를 등록합니다
+    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+        searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
+            marker.setPosition(mouseEvent.latLng);
+
+            if (status === kakao.maps.services.Status.OK) {
+                setFullAddress(result[0]);
+            }
+        });
+    });
+}
+
+function searchDetailAddrFromCoords(coords, callback) {
+    // 좌표로 법정동 상세 주소 정보를 요청합니다
+    geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+}
+
+function setFullAddress(address){
+
+    if(address === undefined)
+        return false;
+
+    let detailAddr = !!address.road_address ? `도로명주소 : ${address.road_address.address_name}\n` : '';
+    detailAddr += `지번 주소 : ${address.address.address_name}`;
+
+    locationTextbox.textContent = `${detailAddr}`;
+
+    return true;
 }
