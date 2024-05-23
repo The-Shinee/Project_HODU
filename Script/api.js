@@ -15,7 +15,6 @@ import{
 // ----------------------------------------------------
 // 1. Cat api
 // ----------------------------------------------------
-
 // api key는 무료에 과금정책이 없으므로 가리지 않음
 export async function loadMoreCats() {
     loadingCount.count++;
@@ -24,18 +23,16 @@ export async function loadMoreCats() {
         .catch(() =>{
             showMoreButton.textContent = 'Loading Failed';
         });
-    // const response = await fetch('https://cataas.com/api/cats?tags=cute&type=square&json=true&limit=3')
 
-    const data = await response.json();
 
     const elem = document.createElement('li');
     elem.classList.add('container');
-    let progress = 10; // TODO : limit 관련 수정사항 issue #1
 
+    let progress = GALLERY_COLUMN;
+    const data = await response.json();
     data.forEach(cat => {
         const img = document.createElement('img');
         img.src = cat.url;
-        // img.src = `https://cataas.com/cat/${cat._id}`;
         img.addEventListener('load', ()=>{
             elem.appendChild(img);
             progress--;
@@ -50,6 +47,7 @@ export async function loadMoreCats() {
 // ----------------------------------------------------
 // 2. Kakao map api
 // ----------------------------------------------------
+// api key는 무료에 과금정책이 없으므로 가리지 않음
 const mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(37.56699, 126.97821), // 지도의 중심좌표
