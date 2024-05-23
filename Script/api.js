@@ -4,26 +4,21 @@ import {
 } from './components.js';
 
 import {
-    Queue,
-} from './core.js';
-
-import {
     API_KEY_CAT,
     GALLERY_COLUMN,
 } from './define.js'
 
+import{
+    loadingCount
+} from './events.js';
+
 // ----------------------------------------------------
 // 1. Cat api
 // ----------------------------------------------------
-const loadQueue = new Queue();
-let rowCount = 0;
 
 // api key는 무료에 과금정책이 없으므로 가리지 않음
 export async function loadMoreCats() {
-    loadQueue.enqueue(rowCount);
-    rowCount++;
-
-    showMoreButton.textContent = `Loading...`;
+    loadingCount.count++;
 
     const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${GALLERY_COLUMN}&api_key=${API_KEY_CAT}`)
         .catch(() =>{
@@ -46,8 +41,7 @@ export async function loadMoreCats() {
             progress--;
             if(progress === 0){
                 galleryContainer.appendChild(elem);
-                loadQueue.dequeue();
-                showMoreButton.textContent = 'Show more';
+                loadingCount.count--;
             }
         });
     });

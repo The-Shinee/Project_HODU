@@ -24,3 +24,16 @@ subscribeButton.addEventListener('click', ()=>{
 subscribeModalButton.addEventListener('click', ()=>{
     windowEventHandler(subscribeModal, WindowsEventType.CLOSE);
 });
+
+export const loadingCount = {
+    get count(){
+        return this._count || 0;
+    },
+    set count(value){
+        this._count = value;
+        if(this._count === 0)
+            showMoreButton.textContent = 'Show more';
+        else
+            showMoreButton.textContent = 'Loading...';
+    }
+};
