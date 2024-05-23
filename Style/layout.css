@@ -76,14 +76,6 @@
     gap: 40px;
 }
 
-#description > .content-box > :first-child{
-    color: #D97652;
-}
-
-#description > .content-box > :last-child > span{
-    color: #D97652;
-}
-
 /* Gallery */
 #gallery{
     justify-content: center;
@@ -106,8 +98,6 @@
     width: 378px;
     height: 378px;
     border-radius: 30px;
-
-    vertical-align: top;
 
     object-fit: cover;
     filter: drop-shadow(10px 10px 30px #00000040);
