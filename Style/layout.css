@@ -105,7 +105,7 @@
     gap: 72px;
 }
 
-#gallery > .content-box > ul li > img{
+.gallery-image{
     width: 378px;
     height: 378px;
     border-radius: 30px;

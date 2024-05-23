@@ -31,10 +31,15 @@ export async function loadMoreCats() {
     let progress = GALLERY_COLUMN;
     const data = await response.json();
     data.forEach(cat => {
+        const linkTag = document.createElement('a');
+        linkTag.setAttribute('href', cat.url);
+        elem.appendChild(linkTag);
+
         const img = document.createElement('img');
+        img.classList.add('gallery-image');
         img.src = cat.url;
         img.addEventListener('load', ()=>{
-            elem.appendChild(img);
+            linkTag.appendChild(img);
             progress--;
             if(progress === 0){
                 galleryContainer.appendChild(elem);
