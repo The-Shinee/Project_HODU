@@ -240,6 +240,22 @@
     object-fit: cover;
 }
 
+/* up-button */
+#button-scroll-top{
+    width: 50px;
+    height: 50px;
+
+    position: fixed;
+    left: 100%;
+    top: 100%;
+    transform: translate(-73px, -71px);
+
+    border: none;
+    background-color: transparent;
+
+    background-image: url("../Resources/Images/scroll-top-btn-normal.svg");
+}
+
 /* Footer */
 #footer-main{
     justify-content: center;

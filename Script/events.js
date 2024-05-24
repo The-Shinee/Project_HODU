@@ -7,6 +7,7 @@ import {
     subscribeButton,
     subscribeModal,
     subscribeModalButton,
+    scrollTopButton,
 } from './components.js';
 
 import {
@@ -23,6 +24,17 @@ subscribeButton.addEventListener('click', ()=>{
 });
 subscribeModalButton.addEventListener('click', ()=>{
     windowEventHandler(subscribeModal, WindowsEventType.CLOSE);
+});
+scrollTopButton.addEventListener('mouseenter', ()=>{
+    scrollTopButton.style.backgroundImage = "url('../Resources/Images/scroll-top-btn-hover.svg')";
+});
+
+scrollTopButton.addEventListener('mouseleave', ()=>{
+    scrollTopButton.style.backgroundImage = "url('../Resources/Images/scroll-top-btn-normal.svg')";
+});
+
+scrollTopButton.addEventListener('click', ()=>{
+    window.scrollTo(0, 0);
 });
 
 export const loadingCount = {
