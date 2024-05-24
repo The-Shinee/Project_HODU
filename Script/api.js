@@ -24,7 +24,6 @@ export async function loadMoreCats() {
             showMoreButton.textContent = 'Loading Failed';
         });
 
-
     const elem = document.createElement('li');
     elem.classList.add('container');
 
@@ -74,9 +73,6 @@ const zoomControl = new kakao.maps.ZoomControl();
 
 // 지도의 우측에 확대 축소 컨트롤을 추가한다
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-
-// 현재 위치를 업데이트 할 텍스트 박스
-const locationTextbox = document.querySelector("#location > .content-box > :nth-child(2)");
 
 const geocoder = new kakao.maps.services.Geocoder();
 
@@ -146,6 +142,8 @@ function setFullAddress(address){
     let detailAddr = !!address.road_address ? `도로명주소 : ${address.road_address.address_name}\n` : '';
     detailAddr += `지번 주소 : ${address.address.address_name}`;
 
+    // 현재 위치를 업데이트 할 텍스트 박스
+    const locationTextbox = document.querySelector("#location-text-box");
     locationTextbox.textContent = `${detailAddr}`;
 
     return true;

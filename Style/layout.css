@@ -114,17 +114,12 @@
     filter: drop-shadow(10px 10px 30px #00000040);
 }
 
-
 #cat-list-container{
     margin-bottom: 80px;
 }
 
-#show-more-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 28px
+#show-more-button{
+    padding: 15px 29px;
 }
 
 /* Location */
@@ -143,7 +138,7 @@
     margin-bottom: 20px;
 }
 
-#location > .content-box > :nth-child(2){
+#location-text-box{
     margin-bottom: 48px;
 }
 
