@@ -1,4 +1,10 @@
-.button-default{
+.a--align--default{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button--default{
     background-color: #D97652;
     border-radius: 40px;
     border: 0;
@@ -9,15 +15,4 @@
 
     cursor: pointer;
     color: white;
-}
-
-.a-vertical-align{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-li{
-    animation: fade-in 0.5s;
-    animation-fill-mode: forwards;
 }

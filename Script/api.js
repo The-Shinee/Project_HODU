@@ -25,7 +25,7 @@ export async function loadMoreCats() {
         });
 
     const elem = document.createElement('li');
-    elem.classList.add('container');
+    elem.classList.add('container', 'fade-in--default');
 
     let progress = GALLERY_COLUMN;
     const data = await response.json();

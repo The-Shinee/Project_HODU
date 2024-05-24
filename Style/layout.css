@@ -64,6 +64,7 @@
     gap: 30px;
 }
 
+/* Description */
 #description{
     margin-bottom: 88px;
 
@@ -97,10 +98,6 @@
     list-style: none;
 }
 
-#gallery > .content-box > p{
-    margin-bottom: 28px;
-}
-
 #gallery > .content-box > ul > li{
     gap: 72px;
 }
@@ -112,6 +109,10 @@
 
     object-fit: cover;
     filter: drop-shadow(10px 10px 30px #00000040);
+}
+
+#gallery > .content-box > p{
+    margin-bottom: 28px;
 }
 
 #cat-list-container{
