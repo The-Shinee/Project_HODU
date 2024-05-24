@@ -19,7 +19,7 @@ import{
 export async function loadMoreCats() {
     loadingCount.count++;
 
-    const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${GALLERY_COLUMN}&api_key=${API_KEY_CAT}`)
+    const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${GALLERY_COLUMN}&api_key=${API_KEY_CAT}`, { cache: "no-store" })
         .catch(() =>{
             showMoreButton.textContent = 'Loading Failed';
         });
