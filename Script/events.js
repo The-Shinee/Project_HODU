@@ -7,11 +7,12 @@ import {
     subscribeButton,
     subscribeModal,
     subscribeModalButton,
-    scrollTopButton,
+    scrollTopButton, emailInput,
 } from './components.js';
 
 import {
     windowEventHandler,
+    emailCheck,
 } from './utils.js';
 
 import{
@@ -22,6 +23,12 @@ showMoreButton.addEventListener('click', ()=> {
     loadMoreCats();
 });
 subscribeButton.addEventListener('click', ()=>{
+    if(emailCheck(emailInput.value) === false)
+    {
+        alert('올바른 이메일 형식을 입력해주세요.');
+        return;
+    }
+
     windowEventHandler(subscribeModal, WindowsEventType.OPEN);
 });
 subscribeModalButton.addEventListener('click', ()=>{

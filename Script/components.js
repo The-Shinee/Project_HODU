@@ -4,3 +4,4 @@ export const subscribeButton = document.querySelector('#subscribe-button');
 export const subscribeModal = document.querySelector('#subscribe-modal');
 export const subscribeModalButton = document.querySelector('#subscribe-modal-button');
 export const scrollTopButton = document.querySelector('#button-scroll-top');
+export const emailInput = document.querySelector('#input-email');
