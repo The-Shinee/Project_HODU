@@ -8,5 +8,5 @@ import {
 
 for(let i = 0 ; i < INIT_GALLERY_ROW ; i++)
 {
-    loadMoreCats();
+    loadMoreCats(true);
 }

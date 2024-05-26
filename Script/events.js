@@ -18,7 +18,9 @@ import{
     WindowsEventType,
 } from './define.js';
 
-showMoreButton.addEventListener('click', loadMoreCats);
+showMoreButton.addEventListener('click', ()=> {
+    loadMoreCats();
+});
 subscribeButton.addEventListener('click', ()=>{
     windowEventHandler(subscribeModal, WindowsEventType.OPEN);
 });
@@ -37,13 +39,13 @@ scrollTopButton.addEventListener('click', ()=>{
     window.scrollTo(0, 0);
 });
 
-export const loadingCount = {
-    get count(){
-        return this._count || 0;
+export const galleryImageLoadingStatus = {
+    get isLoading(){
+        return this._isLoading || false;
     },
-    set count(value){
-        this._count = value;
-        if(this._count === 0)
+    set isLoading(value){
+        this._isLoading = value;
+        if(this._isLoading === false)
             showMoreButton.textContent = 'Show more';
         else
             showMoreButton.textContent = 'Loading...';

@@ -9,15 +9,18 @@ import {
 } from './define.js'
 
 import{
-    loadingCount
+    galleryImageLoadingStatus
 } from './events.js';
 
 // ----------------------------------------------------
 // 1. Cat api
 // ----------------------------------------------------
 // api key는 무료에 과금정책이 없으므로 가리지 않음
-export async function loadMoreCats() {
-    loadingCount.count++;
+export async function loadMoreCats(ignore = false) {
+    if(galleryImageLoadingStatus.isLoading && ignore === false)
+        return false;
+
+    galleryImageLoadingStatus.isLoading = true;
 
     const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${GALLERY_COLUMN}&api_key=${API_KEY_CAT}`, { cache: "no-store" })
         .catch(() =>{
@@ -42,10 +45,12 @@ export async function loadMoreCats() {
             progress--;
             if(progress === 0){
                 galleryContainer.appendChild(elem);
-                loadingCount.count--;
+                galleryImageLoadingStatus.isLoading = false;
             }
         });
     });
+
+    return true;
 }
 
 // ----------------------------------------------------
