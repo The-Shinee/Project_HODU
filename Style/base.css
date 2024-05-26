@@ -9,21 +9,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Pretendard-Regular;
+    font-family: Pretendard-Regular, sans-serif;
 }
 
 a {
     text-decoration-line: none;
     color: #000000;
-}
-
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.content-box{
-    width: 1280px;
-    padding: 0 20px;
 }
