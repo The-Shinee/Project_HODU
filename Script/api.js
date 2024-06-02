@@ -12,6 +12,10 @@ import{
     galleryImageLoadingStatus
 } from './events.js';
 
+import {
+    createElementWithClass
+} from "./utils";
+
 // ----------------------------------------------------
 // 1. Cat api
 // ----------------------------------------------------
@@ -27,8 +31,7 @@ export async function loadMoreCats(ignore = false) {
             showMoreButton.textContent = 'Loading Failed';
         });
 
-    const elem = document.createElement('li');
-    elem.classList.add('container', 'fade-in--default');
+    const elem = createElementWithClass('li', 'container', 'fade-in--default');
 
     let progress = GALLERY_COLUMN;
     const data = await response.json();
@@ -37,8 +40,7 @@ export async function loadMoreCats(ignore = false) {
         linkTag.setAttribute('href', cat.url);
         elem.appendChild(linkTag);
 
-        const img = document.createElement('img');
-        img.classList.add('gallery-image');
+        const img = createElementWithClass('img', 'gallery-image');
         img.src = cat.url;
         img.addEventListener('load', ()=>{
             linkTag.appendChild(img);

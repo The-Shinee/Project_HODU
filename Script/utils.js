@@ -21,3 +21,9 @@ export function emailCheck(email_address){
     const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
     return email_regex.test(email_address);
 }
+
+export function createElementWithClass(tag, ...classes) {
+    const element = document.createElement(tag);
+    element.classList.add(...classes);
+    return element;
+}
