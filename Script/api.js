@@ -8,7 +8,7 @@ import {
     GALLERY_COLUMN,
 } from './define.js'
 
-import{
+import {
     galleryImageLoadingStatus
 } from './events.js';
 
@@ -21,13 +21,13 @@ import {
 // ----------------------------------------------------
 // api key는 무료에 과금정책이 없으므로 가리지 않음
 export async function loadMoreCats(ignore = false) {
-    if(galleryImageLoadingStatus.isLoading && ignore === false)
+    if (galleryImageLoadingStatus.isLoading && ignore === false)
         return false;
 
     galleryImageLoadingStatus.isLoading = true;
 
-    const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${GALLERY_COLUMN}&api_key=${API_KEY_CAT}`, { cache: "no-store" })
-        .catch(() =>{
+    const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${GALLERY_COLUMN}&api_key=${API_KEY_CAT}`, {cache: "no-store"})
+        .catch(() => {
             showMoreButton.textContent = 'Loading Failed';
         });
 
@@ -42,10 +42,10 @@ export async function loadMoreCats(ignore = false) {
 
         const img = createElementWithClass('img', 'gallery-image');
         img.src = cat.url;
-        img.addEventListener('load', ()=>{
+        img.addEventListener('load', () => {
             linkTag.appendChild(img);
             progress--;
-            if(progress === 0){
+            if (progress === 0) {
                 galleryContainer.appendChild(elem);
                 galleryImageLoadingStatus.isLoading = false;
             }
@@ -63,7 +63,7 @@ const mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(37.56699, 126.97821), // 지도의 중심좌표
         level: 4, // 지도의 확대 레벨
-        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+        mapTypeId: kakao.maps.MapTypeId.ROADMAP // 지도종류
     };
 
 // 지도를 생성한다
@@ -87,7 +87,7 @@ const geocoder = new kakao.maps.services.Geocoder();
 if (navigator.geolocation) {
 
     // GeoLocation을 이용해서 접속 위치를 얻어옵니다
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
 
         const lat = position.coords.latitude, // 위도
             lon = position.coords.longitude; // 경도
@@ -97,7 +97,7 @@ if (navigator.geolocation) {
 
         const locPosition = new kakao.maps.LatLng(lat, lon); // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
 
-        geocoder.coord2Address(lon, lat, (result, status) =>{
+        geocoder.coord2Address(lon, lat, (result, status) => {
             if (status === kakao.maps.services.Status.OK) {
                 setFullAddress(result[0]);
             }
@@ -125,8 +125,8 @@ function displayMarker(locPosition) {
     map.setCenter(locPosition);
 
     // 맵에 click 이벤트를 등록합니다
-    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-        searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
+    kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+        searchDetailAddrFromCoords(mouseEvent.latLng, function (result, status) {
             marker.setPosition(mouseEvent.latLng);
 
             if (status === kakao.maps.services.Status.OK) {
@@ -141,9 +141,9 @@ function searchDetailAddrFromCoords(coords, callback) {
     geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
 }
 
-function setFullAddress(address){
+function setFullAddress(address) {
 
-    if(address === undefined)
+    if (address === undefined)
         return false;
 
     let detailAddr = !!address.road_address ? `도로명주소 : ${address.road_address.address_name}\n` : '';

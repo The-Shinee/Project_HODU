@@ -1,4 +1,4 @@
-import{
+import {
     loadMoreCats,
 } from './api.js';
 
@@ -15,44 +15,43 @@ import {
     emailCheck,
 } from './utils.js';
 
-import{
+import {
     WindowsEventType,
 } from './define.js';
 
-showMoreButton.addEventListener('click', ()=> {
+showMoreButton.addEventListener('click', () => {
     loadMoreCats();
 });
-subscribeButton.addEventListener('click', ()=>{
-    if(emailCheck(emailInput.value) === false)
-    {
+subscribeButton.addEventListener('click', () => {
+    if (emailCheck(emailInput.value) === false) {
         alert('올바른 이메일 형식을 입력해주세요.');
         return;
     }
 
     windowEventHandler(subscribeModal, WindowsEventType.OPEN);
 });
-subscribeModalButton.addEventListener('click', ()=>{
+subscribeModalButton.addEventListener('click', () => {
     windowEventHandler(subscribeModal, WindowsEventType.CLOSE);
 });
-scrollTopButton.addEventListener('mouseenter', ()=>{
+scrollTopButton.addEventListener('mouseenter', () => {
     scrollTopButton.style.backgroundImage = "url('../Resources/Images/scroll-top-btn-hover.svg')";
 });
 
-scrollTopButton.addEventListener('mouseleave', ()=>{
+scrollTopButton.addEventListener('mouseleave', () => {
     scrollTopButton.style.backgroundImage = "url('../Resources/Images/scroll-top-btn-normal.svg')";
 });
 
-scrollTopButton.addEventListener('click', ()=>{
+scrollTopButton.addEventListener('click', () => {
     window.scrollTo(0, 0);
 });
 
 export const galleryImageLoadingStatus = {
-    get isLoading(){
+    get isLoading() {
         return this._isLoading || false;
     },
-    set isLoading(value){
+    set isLoading(value) {
         this._isLoading = value;
-        if(this._isLoading === false)
+        if (this._isLoading === false)
             showMoreButton.textContent = 'Show more';
         else
             showMoreButton.textContent = 'Loading...';
