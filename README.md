@@ -6,6 +6,11 @@
 
 `Project_HODU`는 HTML, CSS, JavaScript 기초 기술을 기반으로 제작한 프로젝트입니다. 이 프로젝트는 기본적인 웹 페이지 구조와 스타일링, 그리고 간단한 스크립트를 포함합니다.
 
+## 접속
+아래 링크를 통해 접속합니다.
+
+https://the-shinee.github.io/Project_HODU/
+
 ## 특징
 
 - **HTML**: 웹 페이지의 기본 구조를 제공합니다.
