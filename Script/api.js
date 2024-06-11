@@ -14,7 +14,7 @@ import {
 
 import {
     createElementWithClass
-} from "./utils";
+} from "./utils.js";
 
 // ----------------------------------------------------
 // 1. Cat api
