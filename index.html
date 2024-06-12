@@ -1,193 +1,198 @@
 <!doctype html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>HODU</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HODU</title>
 
-        <!--Import styles-->
-        <link rel="stylesheet" href="Style/base.css">
-        <link rel="stylesheet" href="Style/layout.css">
-        <link rel="stylesheet" href="Style/components.css">
-        <link rel="stylesheet" href="Style/utility.css">
-    </head>
-    <body>
-        <header>
-            <section id="navbar-top" class="container">
-                <h1 class="visually-hidden">HODU</h1>
-                <nav class="container content-box">
-                    <a href="https://www.ioshane.com//">
-                        <img src="Resources/Images/logo-header.svg" alt="호두">
-                    </a>
-                    <div class="container">
-                        <div class="nav-links container">
-                            <a href="https://www.ioshane.com/">Home</a>
-                            <a href="https://www.ioshane.com/">About</a>
-                            <a href="https://www.ioshane.com/">Support</a>
-                        </div>
-                        <a href="Resources/Images/img-cat.svg" download class="button--default width-140 height-50 a--align--default">
-                            Download
-                        </a>
-                    </div>
-                </nav>
-            </section>
-        </header>
-
-        <main>
-            <section id="banner-top" class="container">
-                <h2 class="visually-hidden">Top banner</h2>
-                <div class="container content-box">
-                    <div class="container">
-                        <h3 class="title-big">
-                            Lorem Ipsum is simply<br>
-                            dummy text of the printing and
-                        </h3>
-                        <p class="description">
-                            Lorem Ipsum is simply dummy text of the printing and<br>
-                            typesetting industry.<br>
-                            Lorem Ipsum has been the industry's standard dummy text<br>
-                            ever since the 1500s, when an unknown
-                        </p>
-                        <a href="Resources/Images/img-cat.svg" download class="button--default width-140 height-50 a--align--default">
-                            Download
-                        </a>
-                    </div>
-                    <div class="container">
-                        <img src="Resources/Images/img-cat.svg" alt="고양이">
-                    </div>
+    <!--Import styles-->
+    <link rel="stylesheet" href="Style/base.css">
+    <link rel="stylesheet" href="Style/layout.css">
+    <link rel="stylesheet" href="Style/components.css">
+    <link rel="stylesheet" href="Style/utility.css">
+</head>
+<body>
+<header>
+    <section id="navbar-top" class="container">
+        <h1 class="visually-hidden">HODU</h1>
+        <nav class="container content-box">
+            <a href="https://www.ioshane.com//">
+                <img src="Resources/Images/logo-header.svg" alt="호두">
+            </a>
+            <div class="container">
+                <div class="nav-links container">
+                    <a href="https://www.ioshane.com/">Home</a>
+                    <a href="https://www.ioshane.com/">About</a>
+                    <a href="https://www.ioshane.com/">Support</a>
                 </div>
-            </section>
+                <a href="Resources/Images/img-cat.svg" download
+                   class="button--default width-140 height-50 a--align--default">
+                    Download
+                </a>
+            </div>
+        </nav>
+    </section>
+</header>
 
-            <section id="introduce" class="container">
-                <h2 class="visually-hidden">Introduction area</h2>
-                <div class="container content-box">
-                    <img src="Resources/Images/img-cat-subtitle.svg" alt="고양이">
-                    <div>
-                        <p class="title-38">
-                            Lorem Ipsum is simply<br>
-                            dummy text of the printing<br>
-                            and dummy text
-                        </p>
-                        <p class="description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="description" class="container">
-                <h2 class="visually-hidden">Description area</h2>
-                <div class="container content-box">
-                    <p class="title-big color-terracotta">
-                        dummy text of the printing and dummy
-                    </p>
-                    <p class="description">
-                        Lorem Ipsum is simply <span class="color-terracotta">dummy text</span> of the printing and typesetting industry.<br>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    </p>
-                </div>
-            </section>
-
-            <article id="gallery" class="container">
-                <h2 class="visually-hidden">Gallery area</h2>
-                <div class="content-box">
-                    <ul id="image-gallery" class="container">
-                    </ul>
-                    <p class="title-24">
-                        Continue exploring HODU
-                    </p>
-                    <button type="button" id="show-more-button" class="button--default">
-                        Show more
-                    </button>
-                </div>
-            </article>
-
-            <hr class="margin-b-68">
-
-            <section id="location" class="container">
-                <h2 class="visually-hidden">Location area</h2>
-                <div class="container content-box">
-                    <p class="title-36">
-                        Where you’ll be
-                    </p>
-                    <p id="location-text-box" class="description color-iron">
-                        Progressing...
-                    </p>
-                    <div id="map" style="width: 100%; height:520px;"></div>
-                </div>
-            </section>
-
-            <section id="subscribe" class="container">
-                <h2 class="visually-hidden">Subscribe area</h2>
-                <div class="content-box">
-                    <div class="container">
-                        <div>
-                            <p class="title-36 color-white">
-                                Subscribe to our Blog post
-                            </p>
-                            <p class="description-14 color-ivory">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
-                                Lorem Ipsum has been the industry's standard dummy text
-                            </p>
-                        </div>
-                        <div>
-                            <form id="subscribe-form">
-                                <img src="Resources/Images/icon-mail.svg" alt="메일 아이콘" class="align-v-middle">
-                                <label for="input-email"></label>
-                                <input type="email" name="input-email" id="input-email" placeholder="Enter your e-mail address" class="description border-less align-v-middle" required>
-                                <button type="button" id="subscribe-button" class="button--default width-135 height-50 align-v-middle">
-                                    Subscribe
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <article id="subscribe-modal">
-            <h2 class="visually-hidden">Subscribe modal</h2>
-            <img src="Resources/Images/img-cat-modal.svg" alt="모달창 고양이">
-            <h2 class="color-terracotta title-36">Thank you!</h2>
-            <p class="description-14">Lorem Ipsum is simply dummy text of the printing industry.</p>
-            <button type="button" id="subscribe-modal-button" class="button--default" >OK! I Love HODU</button>
-        </article>
-
-        <div class="anchor">
-            <img src="Resources/Images/img-cat-bottom.svg" alt="페이지 하단 배경 고양이" id="img-cat-bottom">
+<main>
+    <section id="banner-top" class="container">
+        <h2 class="visually-hidden">Top banner</h2>
+        <div class="container content-box">
+            <div class="container">
+                <h3 class="title-big">
+                    Lorem Ipsum is simply<br>
+                    dummy text of the printing and
+                </h3>
+                <p class="description">
+                    Lorem Ipsum is simply dummy text of the printing and<br>
+                    typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text<br>
+                    ever since the 1500s, when an unknown
+                </p>
+                <a href="Resources/Images/img-cat.svg" download
+                   class="button--default width-140 height-50 a--align--default">
+                    Download
+                </a>
+            </div>
+            <div class="container">
+                <img src="Resources/Images/img-cat.svg" alt="고양이">
+            </div>
         </div>
+    </section>
 
-        <button type="button" id="button-scroll-top" class="button--default"></button>
+    <section id="introduce" class="container">
+        <h2 class="visually-hidden">Introduction area</h2>
+        <div class="container content-box">
+            <img src="Resources/Images/img-cat-subtitle.svg" alt="고양이">
+            <div>
+                <p class="title-38">
+                    Lorem Ipsum is simply<br>
+                    dummy text of the printing<br>
+                    and dummy text
+                </p>
+                <p class="description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <section id="footer-main" class="container">
-                <h2 class="visually-hidden">Footer contents area</h2>
-                <div class="container content-box">
-                    <a href="https://www.ioshane.com/">
-                        <img src="Resources/Images/logo-footer.svg" alt="브랜드 로고">
-                    </a>
-                    <div id="group-footer-icon">
-                        <a href="https://blog.naver.com/paul-lab">
-                            <img src="Resources/Images/icon-blog.svg" alt="HODU 블로그 바로가기">
-                        </a>
-                        <a href="https://www.instagram.com/weniv_official/">
-                            <img src="Resources/Images/icon-insta.svg" alt="HODU 인스타그램 바로가기">
-                        </a>
-                        <a href="https://www.facebook.com/Jejucoding">
-                            <img src="Resources/Images/icon-facebook.svg" alt="HODU 페이스북 바로가기">
-                        </a>
-                        <a href="https://www.youtube.com/@jejucodingcamp">
-                            <img src="Resources/Images/icon-youtube.svg" alt="HODU 유튜브 바로가기">
-                        </a>
-                    </div>
+    <section id="description" class="container">
+        <h2 class="visually-hidden">Description area</h2>
+        <div class="container content-box">
+            <p class="title-big color-terracotta">
+                dummy text of the printing and dummy
+            </p>
+            <p class="description">
+                Lorem Ipsum is simply <span class="color-terracotta">dummy text</span> of the printing and typesetting
+                industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            </p>
+        </div>
+    </section>
+
+    <article id="gallery" class="container">
+        <h2 class="visually-hidden">Gallery area</h2>
+        <div class="content-box">
+            <ul id="image-gallery" class="container">
+            </ul>
+            <p class="title-24">
+                Continue exploring HODU
+            </p>
+            <button type="button" id="show-more-button" class="button--default">
+                Show more
+            </button>
+        </div>
+    </article>
+
+    <hr class="margin-b-68">
+
+    <section id="location" class="container">
+        <h2 class="visually-hidden">Location area</h2>
+        <div class="container content-box">
+            <p class="title-36">
+                Where you’ll be
+            </p>
+            <p id="location-text-box" class="description color-iron">
+                Progressing...
+            </p>
+            <div id="map" style="width: 100%; height:520px;"></div>
+        </div>
+    </section>
+
+    <section id="subscribe" class="container">
+        <h2 class="visually-hidden">Subscribe area</h2>
+        <div class="content-box">
+            <div class="container">
+                <div>
+                    <p class="title-36 color-white">
+                        Subscribe to our Blog post
+                    </p>
+                    <p class="description-14 color-ivory">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                        Lorem Ipsum has been the industry's standard dummy text
+                    </p>
                 </div>
-            </section>
-        </footer>
+                <div>
+                    <form id="subscribe-form">
+                        <img src="Resources/Images/icon-mail.svg" alt="메일 아이콘" class="align-v-middle">
+                        <label for="input-email"></label>
+                        <input type="email" name="input-email" id="input-email" placeholder="Enter your e-mail address"
+                               class="description border-less align-v-middle" required>
+                        <button type="button" id="subscribe-button"
+                                class="button--default width-135 height-50 align-v-middle">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-        <script type="module" src="./Script/initialize.js"></script>
-        <script type="module" src="./Script/api.js"></script>
-        <script type="module" src="./Script/events.js"></script>
-        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d1a5a6bf215d1bd310f066fb0cc072ae&libraries=services"></script>
-    </body>
+<article id="subscribe-modal">
+    <h2 class="visually-hidden">Subscribe modal</h2>
+    <img src="Resources/Images/img-cat-modal.svg" alt="모달창 고양이">
+    <h2 class="color-terracotta title-36">Thank you!</h2>
+    <p class="description-14">Lorem Ipsum is simply dummy text of the printing industry.</p>
+    <button type="button" id="subscribe-modal-button" class="button--default">OK! I Love HODU</button>
+</article>
+
+<div class="anchor">
+    <img src="Resources/Images/img-cat-bottom.svg" alt="페이지 하단 배경 고양이" id="img-cat-bottom">
+</div>
+
+<button type="button" id="button-scroll-top" class="button--default"></button>
+
+<footer>
+    <section id="footer-main" class="container">
+        <h2 class="visually-hidden">Footer contents area</h2>
+        <div class="container content-box">
+            <a href="https://www.ioshane.com/">
+                <img src="Resources/Images/logo-footer.svg" alt="브랜드 로고">
+            </a>
+            <div id="group-footer-icon">
+                <a href="https://blog.naver.com/paul-lab">
+                    <img src="Resources/Images/icon-blog.svg" alt="HODU 블로그 바로가기">
+                </a>
+                <a href="https://www.instagram.com/weniv_official/">
+                    <img src="Resources/Images/icon-insta.svg" alt="HODU 인스타그램 바로가기">
+                </a>
+                <a href="https://www.facebook.com/Jejucoding">
+                    <img src="Resources/Images/icon-facebook.svg" alt="HODU 페이스북 바로가기">
+                </a>
+                <a href="https://www.youtube.com/@jejucodingcamp">
+                    <img src="Resources/Images/icon-youtube.svg" alt="HODU 유튜브 바로가기">
+                </a>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<script type="module" src="./Script/initialize.js"></script>
+<script type="module" src="./Script/api.js"></script>
+<script type="module" src="./Script/events.js"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d1a5a6bf215d1bd310f066fb0cc072ae&libraries=services"></script>
+</body>
 </html>
